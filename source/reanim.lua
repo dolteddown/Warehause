@@ -5737,20 +5737,20 @@ function HatReanimator.Start()
 			end)
 			pcall(sethiddenproperty, plr, "SimulationRadius", radius)
 		end
-		settings().Physics.AllowSleep = false
+		--[[settings().Physics.AllowSleep = false
 		settings().Physics.ThrottleAdjustTime = 0/0
 		for _,plr in Players:GetPlayers() do
 			local a, b = pcall(compareinstances, plr, Player)
 			if a and not b then
 				setsimrad(plr, 0)
 			end
-		end
+		end]]
 		local r = #Players:GetPlayers() * 1000
 		setsimrad(Player, r)
-		if os.clock() > lastsimradchange then
-			lastsimradchange = os.clock() + 1
-			pcall(replicatesignal, Player.SimulationRadiusChanged, r)
-		end
+		--if os.clock() > lastsimradchange then
+			--lastsimradchange = os.clock() + 1
+			--pcall(replicatesignal, Player.SimulationRadiusChanged, r)
+		--end
 		--[[pcall(setsimulationradius, r, r)
 		pcall(function()
 			-- faster than findfirstchild + if then end
@@ -5759,14 +5759,6 @@ function HatReanimator.Start()
 		end)]]
 	end
 	local function IsNetworkOwner(part)
-		if isnetworkowner and false then
-			local s, d = pcall(isnetworkowner, part)
-			if s then
-				return d
-			else
-				return part.ReceiveAge == 0
-			end
-		end
 		return part.ReceiveAge == 0
 	end
 	
