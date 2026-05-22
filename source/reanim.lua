@@ -4922,7 +4922,7 @@ function LimbReanimator.Start()
 			if Reanimate:ShouldRotationType() then
 				Reanimate:CameraLockCharacter()
 			end
-			if ReanimCharacter then
+			if Character and Humanoid and RootPart then
 				UpdateTransforms(ReanimCharacter, RootPart, rootcf, rootvel, flingtarget, flingcf)
 			end
 		end
