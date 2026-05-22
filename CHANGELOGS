@@ -13,6 +13,7 @@
  - Fixed gamepad button A
  - secrets
  - Added window dragging bounds
+ - Fixed a bug in limb reanimation where the real RootPart is 1 frame behind
 # Version 1.0.6 BETA
  - Renamed "RootPart in void" mode to "RootPart in very void"
  - Added "RootPart in void" which fixes floating point issues with the torso.
