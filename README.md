@@ -8,7 +8,7 @@
 This is the official repository for Warehause.
 The other repository (by vixie) was made not as a direct fork but as a new project, making this harder to do for me and vixie.
 
-Join the [DISCORD](https://discord.gg/NASNUKRBVM) of all my programming AND game-specific shenanigans!
+Join the [DISCORD](https://discord.gg/X2wcVXAgcd) of all my programming AND game-specific shenanigans!
 
 **NOTICE:** This is an unofficial fork
 ## Loadstring
