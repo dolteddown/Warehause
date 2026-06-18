@@ -14,13 +14,16 @@
 
        Code:    STEVETHEREALONE
                 BoredGal (mostly patches..)
+                dolteddown (maintainer of the fork)
        GFX:     STEVETHEREALONE
                 AALib
                 some random generators
        Music:   Dubmood
                 4mat
                 MASTER BOOT RECORD
-
+                uCF
+                Grand Lord
+                uhh yeah me too (dolteddown)
 Thou shalth not steal. Point at this source if you used a snippet here.
 ]]
 
