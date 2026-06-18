@@ -1,33 +1,23 @@
-# <p align="center">STEVETHEREALONE (@steve_internal)'s Universal Hierarchical 6 Reanimator</p>
+# <p align="center">dolteddown (and STEVETHEREALONE)'s Universal Hierarchical 6 Reanimator</p>
 <p align="center">A really cool, optimised animation program with demo scenes! Idea originated from a dream.</p>
 <p align="center">
 	<img src="./images/Showcase.gif" alt="drawing" width="45%"/>
 	<img src="./images/Showcase2.gif" alt="drawing" width="45%"/>
 </p>
 
-This is the official repository for Uhhhhhh.
-All code is stored in this repository.
-Feel free to use these as your reference.
+This is the official repository for Warehause.
+The other repository (by vixie) was made not as a direct fork but as a new project, making this harder to do for me and vixie.
 
-Join the [DISCORD](https://discord.gg/NASNUKRBVM) of all my programming shenanigans! :D
+Join the [DISCORD](https://discord.gg/NASNUKRBVM) of all my programming AND game-specific shenanigans!
 
-**NOTICE:** This is still in development, so things are subject to change and stuff are expected to be missing.
-
+**NOTICE:** This is an unofficial fork
 ## Loadstring
-Pick from one of these:
-
-1. raw loadstring (cached by github)
+this:
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/STEVE-916-create/Uhhhhhh/main/source/reanim.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/refs/heads/main/source/reanim.lua"))()
 ```
-
-2. api loadstring (bypasses github cache)
-```lua
-local a,b,c,g="/STEVE-916-create/Uhhhhhh/","/source/reanim.lua",".github","https://"local d=request({Url=`{g}api{c}.com/repos{a}contents{b}`,Headers={Accept=`application/vnd{c}.VERSION.raw`}})if d.StatusCode~=200 then d.Body=game:HttpGet(`{g}raw{c}usercontent.com{a}main{b}`)end local e,f=loadstring(d.Body)if not e then warn(f)else e()end
-```
-
-## Features:
-1. ~Probably the most stable hatdrop~ (roblox patched permadeath which makes this useless 3:)
+## Uhhhhhh Features:
+1. Probably the most stable hatdrop (roblox has patched permadeath, but in ragdoll games you can bring it back!)
 
    Uhhhhhh's hatdrop supports most (if not all) hat rigs!
 
@@ -58,7 +48,7 @@ local a,b,c,g="/STEVE-916-create/Uhhhhhh/","/source/reanim.lua",".github","https
 5. Takes advantage of random replicate properties
 
    Serversided Physics glue = very accurate (and fast) fling!
-
+   (this is about to be patched :( )
    <img src="./images/FastestFling.gif" alt="drawing" width="350"/>
 
 6. Modding support
