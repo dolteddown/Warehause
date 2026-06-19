@@ -6572,8 +6572,16 @@ function HatReanimator.Start()
 						handle.RotVelocity = Vector3.new(0, 0, 0)
 					end
 				end))
-				local w = handle:FindFirstChild("AccessoryWeld")
-				if w and w:IsA("Weld") then w:Destroy() end
+				for _,v in handle:GetChildren() do
+					if v:IsA("JointInstance") then v:Destroy() end
+					if v:IsA("Constraint") then v.Enabled = false end
+					if v:IsA("Attachment") then
+						v.Archivable = true
+						local w = v:Clone()
+						v:Destroy()
+						w.Parent = handle
+					end
+				end
 				handle:SetAttribute("_Uhhhhhh_HasCollide", false)
 			end
 		end
