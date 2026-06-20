@@ -5945,6 +5945,7 @@ function HatReanimator.Start()
 								vel = vel.Unit * netless
 							end
 							handle.AssemblyLinearVelocity = Vector3.new(vel.X, math.max(vel.Y, netless), vel.Z)
+							handle:ApplyImpulse(Vector3.new(vel.X, math.max(vel.Y, netless), vel.Z))
 						end
 					end
 				end
@@ -5958,8 +5959,10 @@ function HatReanimator.Start()
 			else
 				if Reanimate.UseAngularVelocity then
 					handle.AssemblyAngularVelocity = rvel + idleoff
+					handle:ApplyAngularImpulse(rvel + idleoff) -- marked1 (im having to mark stuff sry)
 				else
 					handle.AssemblyAngularVelocity = idleoff
+					handle:ApplyAngularImpulse(idleoff)
 				end
 			end
 		else
