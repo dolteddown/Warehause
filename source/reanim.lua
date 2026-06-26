@@ -66,7 +66,7 @@ Util.DeepcopyTable = function(t)
 end
 Util.Notify = function(text)
 	StarterGui:SetCore("SendNotification", {
-		Title = "ware.",
+		Title = "-warehause-",
 		Text = text,
 		Duration = 5
 	})
@@ -74,7 +74,7 @@ end
 
 cloneref = cloneref or function(o) return o end
 getcustomasset = getcustomasset or getsynasset
-gethiddengui = get_hidden_gui or gethui
+gethiddengui = get_hidden_gui or gethui or cloneref(game:GetService("CoreGui"))
 request = request or (http and http.request)
 
 local function ismissing(func)
@@ -145,9 +145,22 @@ do
 			end
 		end
 	end
-	--if ismissing(hookmetamethod) or ismissing(hookfunction) then
-	--	diefatal("Missing `hookmetamethod` and `hookfunction` function!")
-	--end
+	if ismissing(hookfunction) then
+	local function hookfunction(func, rep)
+	local env = getfenv(debug.info(2, 'f')) 
+	for i, v in pairs(env) do 
+		if v == func then
+			env[i] = rep 
+		end
+	end
+end
+	end
+if ismissing(hookmetamethod) then
+	function hookmetamethod(obj, method, func)
+      return hookfunction(getrawmetatable(obj)[method], func)
+      end
+ end
+	end
 	local loadstringreturn = false
 	local val = math.random(-65536, 65536)
 	local _, func = pcall(loadstring, "return " .. val)
