@@ -16,7 +16,7 @@ this:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/refs/heads/main/source/reanim.lua"))()
 ```
-## Uhhhhhh Features:
+## **Uhhhhhh's:** Features (not entirely warehauses):
 1. Probably the most stable hatdrop (roblox has patched permadeath, but in ragdoll games you can bring it back!)
 
    Uhhhhhh's hatdrop supports most (if not all) hat rigs!
@@ -25,7 +25,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/
 
    <img src="./images/WaistRigSupport.gif" alt="drawing" width="350"/>
 
-2. Limb reanimation support
+2. ~~Limb reanimation support~~ (unfortunately ReplicateCurrentAngle/Orientation6D have been removed so this is patched out 😭😭)
 
    In the case where you are just unable to afford hats, you can use your own limbs instead!
 
@@ -47,7 +47,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/
 
 5. Takes advantage of random replicate properties
 
-   Serversided Physics glue = very accurate (and fast) fling!
+   ~~Serversided Physics glue = very accurate (and fast) fling!~~ (PhysicsRepRootPart is not a property of basepart anymore meaning this is patched TOO)
    (this is about to be patched :( )
    <img src="./images/FastestFling.gif" alt="drawing" width="350"/>
 
