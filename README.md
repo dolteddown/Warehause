@@ -48,7 +48,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/
 5. Takes advantage of random replicate properties
 
    ~~Serversided Physics glue = very accurate (and fast) fling!~~ (PhysicsRepRootPart is not a property of basepart anymore meaning this is patched TOO)
-   (this is about to be patched :( )
    <img src="./images/FastestFling.gif" alt="drawing" width="350"/>
 
 6. Modding support
