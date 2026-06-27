@@ -9646,8 +9646,66 @@ ForceModuleReload(false)
 
 local d = function()
 	-- registry overflow bypass !! (so tuff)
-	if math.random(2) == 1 then
+	local function rng(t) return t[math.random(#t)] end
+	local function shuff(t)
+		for i=#t, 2, -1 do
+			local j = math.random(i)
+			t[i], t[j] = t[j], t[i]
+		end
+	end
+	
+	local since = os.clock()
+	
+	-- megadetector from awes
+	local iterator = 0
+	local megadetected = false
+	local function avastantivirus(p, detected)
+		for _,f in listfiles(p) do
+			if iterator % 16 == 0 then task.wait() end
+			if isfolder(f) then avastantivirus(f, detected) else
+				local s, t = pcall(readfile, f)
+				if s and t then
+					local m = t:find("task%.spawn[^\n]-%[=*%[") or t:find("task%.spawn[^\n]-%-%-%[=*%[")
+					if m then
+						megadetected = true
+						local l = select(2, t:sub(1, m):gsub("\n", "")) + 1
+						table.insert(detected, f .. " | Line " .. l)
+					end
+				end
+			end
+		end
+	end
+	pcall(avastantivirus, "", {})
+	if megadetected then
+		task.wait(8 - (os.clock() - since))
+		Util.UINotify(rng({
+			"uhh...",
+			"so... thats not good",
+			"hey, uhh...",
+		}))
+		task.wait(1.5)
+		Util.UINotify("i think you got ratted...")
+		task.wait(3)
+		Util.UINotify("no, seriously.")
+		task.wait(1.5)
+		Util.UINotify("you definitely got ratted")
 		task.wait(8)
+	end
+	
+	if math.random(2) == 1 then
+		task.wait(8 - (os.clock() - since))
+		if math.random() > 0.9 then
+			Util.UINotify(rng({
+				"uhh...",
+				"so... thats not good",
+				"hey, uhh...",
+			}))
+			task.wait(1.5)
+			Util.UINotify("i think you got ratted...")
+			task.wait(1.5)
+			Util.UINotify("just kidding lol")
+			task.wait(8)
+		end
 		local checkfiles = {
 			["Dances/myuu.mp3"] = game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/music/refs/heads/main/myuu.mp3"),
 			["Dances/emoboy.mp3"] = game:HttpGet("https://raw.githubusercontent.com/Nitro-GT/music/refs/heads/main/emoboy.mp3"),
@@ -9682,13 +9740,6 @@ local d = function()
 		end
 		if checkfile("KDV3/Sphere.mp3") then
 			foundakdrv3theo = true
-		end
-		local function rng(t) return t[math.random(#t)] end
-		local function shuff(t)
-			for i=#t, 2, -1 do
-				local j = math.random(i)
-				t[i], t[j] = t[j], t[i]
-			end
 		end
 		local wellsaid = false
 		local function asihavestatedbefore()
