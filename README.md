@@ -1,5 +1,5 @@
 # <p align="center">dolteddown (and STEVETHEREALONE)'s Universal Hierarchical 6 Reanimator</p>
-<p align="center">A really cool, optimised animation program with demo scenes! Idea originated from a dream.</p>
+<p align="center">This project has been shutdown, RIP Warehause Reanimate.</p>
 <p align="center">
 	<img src="./images/Showcase.gif" alt="drawing" width="45%"/>
 	<img src="./images/Showcase2.gif" alt="drawing" width="45%"/>
@@ -8,7 +8,7 @@
 This is the official repository for Warehause.
 The other repository (by vixie) was made not as a direct fork but as a new project, making this harder to do for me and vixie.
 
-Join the [DISCORD](https://discord.gg/X2wcVXAgcd) of all my programming AND game-specific shenanigans!
+Join the [DISCORD]([https://discord.gg/WaYjyjaMvQ]) of all my programming AND game-specific shenanigans!
 
 **NOTICE:** This is an unofficial fork
 ## Loadstring
