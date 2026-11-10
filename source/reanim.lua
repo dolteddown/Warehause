@@ -13,21 +13,24 @@
        "Whether you think you can or you think you can't, you're right." - Henry Ford
 
        Code:    STEVETHEREALONE
-                BoredGal (mostly patches..)
+                BoredGal (mostly patches..
+           	    dolteddown (you think you'd know a guy :sob:)
        GFX:     STEVETHEREALONE
                 AALib
                 some random generators
        Music:   Dubmood
                 4mat
+                μCF
+                Grand Lord
                 MASTER BOOT RECORD
-
+                dolteddown (Bro)
 Thou shalth not steal. Point at this source if you used a snippet here.
 ]]
 
 if _G.UhhhhhhLoaded then return end
 _G.UhhhhhhLoaded = true
 workspace.Gravity = 0
-local UhhhhhhVersion = "V1.0.9-dd BETA"
+local UhhhhhhVersion = "WHV1"
 
 local Debris = cloneref(game:GetService("Debris"))
 local CoreGui = cloneref(game:GetService("CoreGui"))
@@ -66,7 +69,7 @@ Util.DeepcopyTable = function(t)
 end
 Util.Notify = function(text)
 	StarterGui:SetCore("SendNotification", {
-		Title = "ware.",
+		Title = "warehause !!",
 		Text = text,
 		Duration = 5
 	})
@@ -104,9 +107,9 @@ do
 	if ismissing(firetouchinterest) then
 		diefatal("Missing `firetouchinterest` function!")
 	end
-	--if ismissing(replicatesignal) then
-	--	diefatal("Missing `replicatesignal` function!")
-	--end
+	if ismissing(replicatesignal) then
+		diefatal("Missing `replicatesignal` function!")
+	end
 	if ismissing(gethiddenproperty) then
 		if ismissing(setscriptable) then
 			diefatal("Missing `gethiddenproperty` and `setscriptable` function!")
@@ -3359,7 +3362,7 @@ pcall(function()
 	sethiddenproperty(ws, "SignalBehavior", "Immediate")
 end)
 pcall(function()
-	settings().Network.IncomingReplicationLag = -100
+	settings().Network.IncomingReplicationLag = -67
 end)
 local Reanimate = {
 	Current = nil,
@@ -7314,7 +7317,7 @@ do
 			end
 		end
 	end)
-	local CharacterScaleSlider = UI.CreateSlider(MainPage, "Character Scale", Reanimate.CharacterScale, 0.5, 5, 0.5)
+	local CharacterScaleSlider = UI.CreateSlider(MainPage, "Character Scale", Reanimate.CharacterScale, 0.5, 7.5, 0.5)
 	CharacterScaleSlider.Changed:Connect(function(val)
 		val = math.clamp(val, 0.001, math.huge)
 		CharacterScaleSlider.Value = val
@@ -7487,9 +7490,9 @@ do
 		Reanimate.UsePatchmaLikeNetless = val
 		SaveData.UsePatchmaLikeNetless = val
 	end)
-	local NetVelSlider = UI.CreateSlider(MainPage, "Netless Velocity", Reanimate.NetlessVelocity, 25.01, 30, 0.1)
+	local NetVelSlider = UI.CreateSlider(MainPage, "Netless Velocity", Reanimate.NetlessVelocity, 0, 30, 0.1)
 	NetVelSlider.Changed:Connect(function(val)
-		val = math.clamp(val, 25.01, 300)
+		val = math.clamp(val, 0, 300)
 		NetVelSlider.Value = val
 		Reanimate.NetlessVelocity = val
 		SaveData.NetlessVelocity = val
