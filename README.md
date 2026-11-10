@@ -6,10 +6,7 @@
 </p>
 
 This is the official repository for Warehause.
-The other repository (by vixie) was made not as a direct fork but as a new project, making this harder to do for me and vixie.
-
-Join the [DISCORD]([https://discord.gg/WaYjyjaMvQ]) of all my programming AND game-specific shenanigans!
-
+The other repository (by vixie) was made not as a direct fork but as a new project, making this harder to do for me and vixie
 **NOTICE:** This is an unofficial fork
 ## Loadstring
 this:
@@ -17,7 +14,7 @@ this:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/refs/heads/main/source/reanim.lua"))()
 ```
 ## **Uhhhhhh's:** Features (not entirely warehauses):
-1. Probably the most stable hatdrop (roblox has patched permadeath, but in ragdoll games you can bring it back!)
+1. Probably the most stable hatdrop (RAGDOLL PD DOESN'T SUPPORT THIS)
 
    Uhhhhhh's hatdrop supports most (if not all) hat rigs!
 
@@ -47,7 +44,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dolteddown/Warehause/
 
 5. Takes advantage of random replicate properties
 
-   ~~Serversided Physics glue = very accurate (and fast) fling!~~ (PhysicsRepRootPart is not a property of basepart anymore meaning this is patched TOO)
+   Serversided Physics glue = very accurate (and fast) fling!
    <img src="./images/FastestFling.gif" alt="drawing" width="350"/>
 
 6. Modding support
